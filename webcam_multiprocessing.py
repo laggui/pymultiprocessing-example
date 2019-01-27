@@ -39,7 +39,7 @@ def plot_detections(connection_obj):
     plt.show()
     plt.close('all')
 
-def cam_output_face_detect(connection_obj, flip=True, haar_frontal='haarcascade_frontalface_default.xml', haar_second=None):
+def cam_output_face_detect(connection_obj, flip=True, haar_frontal='data/haarcascade_frontalface_default.xml', haar_second=None):
     import cv2
     import matplotlib.pyplot as plt
     # init cam
@@ -83,7 +83,7 @@ def cam_output_face_detect(connection_obj, flip=True, haar_frontal='haarcascade_
     connection_obj.close()
 
 if __name__ == '__main__':
-    #haar_profile = 'haarcascade_profileface.xml'
+    #haar_profile = 'data/haarcascade_profileface.xml'
     # create pipe
     recv_conn, send_conn = Pipe(duplex=False)
 
